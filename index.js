@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
+import { v4 as uuidv4 } from 'uuid';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -37,7 +38,13 @@ app.post("/submit", (req, res) => {
         authors.push({ name: author, contact });
     }
 
-    blogs.push({ title, content, author, contact });
+    blogs.push({ id: uuidv4(), title, content, author, contact });
+    res.redirect("/");
+});
+
+app.post("/delete/:id", (req, res) => {
+    const blogId = req.params.id;
+    blogs = blogs.filter(blog => blog.id !== blogId);
     res.redirect("/");
 });
 

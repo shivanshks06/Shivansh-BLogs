@@ -1,7 +1,7 @@
 {
   "name": "capstone_blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "version 1",
   "license": "ISC",
   "author": "",
   "type": "module",
@@ -16,7 +16,17 @@
     "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.1.12",
+    "uuid": "^11.1.0"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivanshks06/Shivansh-BLogs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shivanshks06/Shivansh-BLogs/issues"
+  },
+  "homepage": "https://github.com/shivanshks06/Shivansh-BLogs#readme"
 }
