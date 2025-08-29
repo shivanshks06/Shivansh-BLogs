@@ -44,9 +44,32 @@ app.post("/submit", (req, res) => {
 
 app.post("/delete/:id", (req, res) => {
     const blogId = req.params.id;
-    blogs = blogs.filter(blog => blog.id !== blogId);
+
+    // Find the blog being deleted
+    const blogToDelete = blogs.find(blog => blog.id === blogId);
+
+    if (blogToDelete) {
+        // Remove the blog
+        blogs = blogs.filter(blog => blog.id !== blogId);
+
+        // Check if the author has any other blogs
+        const otherBlogs = blogs.filter(blog => 
+            blog.author === blogToDelete.author &&
+            blog.contact === blogToDelete.contact
+        );
+
+        // If no other blogs, remove the author too
+        if (otherBlogs.length === 0) {
+            authors = authors.filter(author => 
+                author.name !== blogToDelete.author || 
+                author.contact !== blogToDelete.contact
+            );
+        }
+    }
+
     res.redirect("/");
 });
+
 
 app.get("/about", (req, res) => {
     res.render("about");
