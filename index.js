@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Fix for ES Modules path
 const __filename = fileURLToPath(import.meta.url);
