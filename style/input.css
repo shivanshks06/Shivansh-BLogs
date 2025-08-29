@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* Scan everything in the project for Tailwind classes */
+@source "./**/*.{html,js,ejs,jsx,ts,tsx,vue,svelte}";

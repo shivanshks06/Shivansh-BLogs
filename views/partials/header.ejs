@@ -1,0 +1,55 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivansh Blogs</title>
+
+
+    <link href="../../style/output.css" rel="stylesheet">
+</head>
+
+<header>
+    <nav class="w-full bg-slate-900 flex flex-row justify-between p-4 items-center">
+        <div class="flex flex-row items-center gap-3 p-3">
+            <a href="/">
+                <img class="h-12 w-12 cursor-pointer" src="./assests/images/SB_logo.png" alt="SB Logo">
+            </a>
+            <div class="h-7 w-1 bg-amber-300 rounded-2xl"></div>
+            <a href="/" class="text-xl text-white cursor-pointer">
+                <h1>Shivansh Blogs</h1>
+            </a>
+        </div>
+        <div class="flex flex-row gap-5 md:gap-10 items-center p-3 relative">
+            <a href="/newblog"
+                class="bg-blue-500 w-20 h-8 rounded-2xl font-bold cursor-pointer flex items-center justify-center">
+                New Blog
+            </a>
+            <button id="menu-btn" class="text-4xl cursor-pointer text-amber-50" type="button">&#8801;</button>
+        </div>
+        <div id="menu" class="fixed top-0 right-0 w-35 h-auto bg-slate-800 text-white
+            transform translate-x-full opacity-0 pointer-events-none
+            transition-all duration-300 ease-in-out shadow-lg rounded-l-2xl z-50">
+            <ul class="flex flex-col gap-4 p-6">
+                <li><a href="/about" class="hover:text-amber-400">About</a></li>
+                <li><a href="/contact" class="hover:text-amber-400">Contact</a></li>
+                <li><a href="/authors" class="hover:text-amber-400">Authors</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="w-full h-40 bg-cover bg-center flex flex-row justify-between items-center p-10"
+        style="background-image: url(./assests/images/bg-1.jpg);">
+        <div>
+            <h1 class="text-3xl text-amber-50">Shivansh Blogs</h1>
+            <p class="text-amber-50">Your source for latest news, updates and many more</p>
+        </div>
+        <div class="flex flex-row gap-3 items-center">
+            <a href="https://www.instagram.com/shivanshks06/">
+                <img class="h-10 w-10 cursor-pointer" src="./assests/images/instagram-logo.png" alt="instagram-logo">
+            </a>
+            <a href="https://www.threads.com/@shivanshks06">
+                <img class="h-12 w-12 cursor-pointer" src="./assests/images/Threads-logo.png" alt="Threads-logo">
+            </a>
+        </div>
+    </div>
+</header>
